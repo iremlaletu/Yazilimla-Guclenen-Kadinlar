@@ -1,0 +1,159 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&family=Oswald:wght@200..700&display=swap');
+
+/* Variables */
+
+:root {
+  --primary-color: #edf2fc;
+  --secondary-color: #212121;
+
+  --text-dark:#1f2937;
+  --text-light:#6b7280;
+  --max-width:1200px;
+
+  --ff-primary:"Oswald", sans-serif;
+  --ff-secondary:"Edu NSW ACT Foundation", cursive;
+  --transition: all 0.3s linear;
+  --spacing: 0.30rem;
+  --radius: 0.5rem;
+  --max-widht:1000px;
+}
+
+.dark-theme{
+  --primary-color: #16181d;
+  --secondary-color: #fff;
+} 
+
+* { 
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  background: var(--primary-color);
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: var(--ff-secondary);
+}
+
+/* Navbar Tabs Content Styles */
+
+.section {
+  background-color: var(--primary-color);
+}
+
+.section-container{
+  min-height: 60vh;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 4rem;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+}
+
+.subtitle{
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: var(--spacing);
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+.title{
+  font-size: 2rem;
+  font-weight: 200;
+  line-height: 3rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.title span {
+  font-weight: 400;
+}
+
+.description{
+  line-height: 1.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 2rem;
+  transition: left 0.3s;
+}
+
+.custom-clr {
+    letter-spacing: var(--spacing);
+    color: var(--secondary-color);
+    margin-top: 20px;
+}
+
+.image{
+  display: grid;
+  place-items: center;
+}
+
+.image img{
+  width: min(30rem, 70%);
+  border-radius: 100%;
+}
+
+/* Network */
+
+.action-btns{
+  display: flex;
+  gap: 1rem;
+}
+
+ul.social-buttons li a {
+    font-size: 20px;
+    line-height: 50px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s;
+    border-radius: 100%;
+    outline: none;
+    color: #989696;
+    background-color: #212529;
+    text-align: center;
+}
+
+/* Dark-Light Theme */
+.theme-toggle{
+  cursor: pointer;
+  color: var(--secondary-color);
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 5px;
+  right: 10px;
+  border-radius: 50%;
+  border: 1px solid var(--secondary-color);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+@media (max-width: 967px) {
+
+  .section-container{
+    padding: 5rem 1rem 5rem 1rem;
+    text-align: center;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .image {
+      grid-area: 1/1/2/2;
+  }
+
+  .action-btns{
+    margin: auto;
+  }
+}
