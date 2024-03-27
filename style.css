@@ -45,7 +45,7 @@ body {
 }
 
 .section-container{
-  min-height: 60vh;
+  min-height: 80vh;
   max-width: var(--max-width);
   margin: auto;
   padding: 50px;
@@ -124,6 +124,10 @@ ul.social-buttons li a {
     text-align: center;
 }
 
+ul.social-buttons li a:hover{
+  color: #fff;
+}
+
 /* Dark-Light Theme */
 .theme-toggle{
   cursor: pointer;
@@ -141,6 +145,15 @@ ul.social-buttons li a {
   align-items: center; 
 }
 
+.container{
+  display: flex;
+  justify-content:space-between;
+  gap: 10px;
+  margin: auto;
+  padding: 50px;
+}
+
+
 @media (max-width: 967px) {
 
   .section-container{
@@ -155,5 +168,11 @@ ul.social-buttons li a {
 
   .action-btns{
     margin: auto;
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
   }
 }
